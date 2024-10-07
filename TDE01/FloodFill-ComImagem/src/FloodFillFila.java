@@ -24,7 +24,7 @@ public class FloodFillFila {
         floodFill(pontoInicialX, pontoInicialY);
 
         // Salvar a imagem resultante
-        ImageIO.write(image, "png", new File("C:/Users/nfatu/TDE01/FloodFill-ComImagem/src/imagens/saida_fila.png"));
+        ImageIO.write(image, "png", new File("src/imagens/saida_fila.png"));
         System.out.println("Imagem resultante salva como saida_fila.png");
     }
 
