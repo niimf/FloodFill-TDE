@@ -14,7 +14,7 @@ public class FloodFillPilha {
 
     static void iniciar() throws IOException {
         // Carregar a imagem de entrada
-        image = ImageIO.read(new File("C:/Users/nfatu/TDE01/FloodFill-ComImagem/src/imagens/entrada.png"));
+        image = ImageIO.read(new File("src/imagens/entrada.png"));
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("\u001B[0mDigite as coordenadas x e y (separadas por espaço):");
@@ -24,7 +24,7 @@ public class FloodFillPilha {
         floodFill(pontoInicialX, pontoInicialY);
 
         // Salvar a imagem resultante
-        ImageIO.write(image, "png", new File("C:/Users/nfatu/TDE01/FloodFill-ComImagem/src/imagens/saida_pilha.png"));
+        ImageIO.write(image, "png", new File("src/imagens/saida_pilha.png"));
         System.out.println("Imagem resultante salva como saida_pilha.png");
     }
 
