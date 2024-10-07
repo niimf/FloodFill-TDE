@@ -14,7 +14,7 @@ public class FloodFillFila {
 
     static void iniciar() throws IOException {
         // Carregar a imagem de entrada
-        image = ImageIO.read(new File("C:/Users/nfatu/TDE01/FloodFill-ComImagem/src/imagens/entrada.png"));
+        image = ImageIO.read(new File("src/imagens/entrada.png"));
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("\u001B[0mDigite as coordenadas x e y (separadas por espaço):");
