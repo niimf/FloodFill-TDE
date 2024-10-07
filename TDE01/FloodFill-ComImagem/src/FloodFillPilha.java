@@ -10,10 +10,10 @@ public class FloodFillPilha {
     static Color corMudar;
     static Color novaCor;
 
-    static Pilha<int[]> pilha = new Pilha<>(1000); // tamanho da pilha
-
+    static Pilha<int[]> pilha = new Pilha<>(1000);
+    
     static void iniciar() throws IOException {
-        // Carregar a imagem de entrada
+        
         image = ImageIO.read(new File("src/imagens/entrada.png"));
 
         Scanner scanner = new Scanner(System.in);
@@ -23,7 +23,6 @@ public class FloodFillPilha {
 
         floodFill(pontoInicialX, pontoInicialY);
 
-        // Salvar a imagem resultante
         ImageIO.write(image, "png", new File("src/imagens/saida_pilha.png"));
         System.out.println("Imagem resultante salva como saida_pilha.png");
     }
@@ -62,10 +61,10 @@ public class FloodFillPilha {
 
             image.setRGB(x, y, novaCor.getRGB());
 
-            pilha.push(new int[]{x, y - 1});  // esquerda
-            pilha.push(new int[]{x, y + 1});  // direita
-            pilha.push(new int[]{x - 1, y});  // cima
-            pilha.push(new int[]{x + 1, y});  // baixo
+            pilha.push(new int[]{x, y - 1});  
+            pilha.push(new int[]{x, y + 1});  
+            pilha.push(new int[]{x - 1, y});  
+            pilha.push(new int[]{x + 1, y});  
         }
     }
 }
