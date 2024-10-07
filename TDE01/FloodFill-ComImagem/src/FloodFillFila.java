@@ -10,10 +10,9 @@ public class FloodFillFila {
     static Color corMudar;
     static Color novaCor;
 
-    static Fila<int[]> fila = new Fila<>(); // usando Fila baseada em ListaDuplamente
+    static Fila<int[]> fila = new Fila<>();
 
     static void iniciar() throws IOException {
-        // Carregar a imagem de entrada
         image = ImageIO.read(new File("src/imagens/entrada.png"));
 
         Scanner scanner = new Scanner(System.in);
@@ -23,7 +22,6 @@ public class FloodFillFila {
 
         floodFill(pontoInicialX, pontoInicialY);
 
-        // Salvar a imagem resultante
         ImageIO.write(image, "png", new File("src/imagens/saida_fila.png"));
         System.out.println("Imagem resultante salva como saida_fila.png");
     }
@@ -62,10 +60,10 @@ public class FloodFillFila {
 
             image.setRGB(x, y, novaCor.getRGB());
 
-            fila.enqueue(new int[]{x, y - 1});  // esquerda
-            fila.enqueue(new int[]{x, y + 1});  // direita
-            fila.enqueue(new int[]{x - 1, y});  // cima
-            fila.enqueue(new int[]{x + 1, y});  // baixo
+            fila.enqueue(new int[]{x, y - 1});  
+            fila.enqueue(new int[]{x, y + 1});  
+            fila.enqueue(new int[]{x - 1, y});  
+            fila.enqueue(new int[]{x + 1, y});  
         }
     }
 }
