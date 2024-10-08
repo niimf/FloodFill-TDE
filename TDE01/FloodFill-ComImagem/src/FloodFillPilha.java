@@ -10,7 +10,7 @@ public class FloodFillPilha {
     static Color corMudar;
     static Color novaCor;
 
-    static Pilha<int[]> pilha = new Pilha<>(1000);
+    static Pilha<int[]> pilha = new Pilha<>(10000);
     
     static void iniciar() throws IOException {
         
